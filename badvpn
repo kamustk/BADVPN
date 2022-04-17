@@ -39,7 +39,7 @@ crontab -l | sed "s|.*badres.sh|00 */$_jikan * * * /etc/badres.sh|g" | crontab -
 break
 	else
 		echo ""
-		echo "Apenas Numeros de 1 a 24 zé mané"
+		echo "Apenas Numeros de 1 a 24 zÃ© manÃ©"
 	fi
 	done
 		echo ""
@@ -83,7 +83,7 @@ if [[ $_jikan =~ ^[0-9]+$ ]] && (( $_jikan >= 1 && $_jikan <= 24)); then
 break
 	else
 		echo ""
-		echo "Apenas Numeros de 1 a 24 zé mané"
+		echo "Apenas Numeros de 1 a 24 zÃ© manÃ©"
 	fi
 	done
 		echo ""
@@ -94,13 +94,13 @@ rm -rf bad.sh
 
 if [[ -e $HOME/badvpn.sh || -e /etc/badvpn.sh ]]; then
   echo ""
-  read -p "$(echo "O Script Será Atualizado, Quer Continuar? [s/n]: ")" -e -i s resposta
+  read -p "$(echo "O Script SerÃ¡ Atualizado, Quer Continuar? [s/n]: ")" -e -i s resposta
   [[ $resposta = @(n|N) ]] && rm -rf bad.sh && sleep 0.5 && exit 0
 fun_atualiza
 source /etc/badvpn.sh
 	else
 	  echo ""
-  read -p "$(echo "O Script Será Instalado, Quer Continuar? [s/n]: ")" -e -i s resposta
+  read -p "$(echo "O Script SerÃ¡ Instalado, Quer Continuar? [s/n]: ")" -e -i s resposta
   [[ $resposta = @(n|N) ]] && rm -rf bad.sh && sleep 0.5 && exit 0
 fun_conf
 source /etc/badvpn.sh
